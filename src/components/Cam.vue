@@ -6,11 +6,11 @@
             <div style="width: 100%;height: 93%;display: flex;flex-direction: column">
               <div class="top" style="width: 100%;height: 60%">
                 <div style="height: 100%;background-color: silver;">
-                  <el-scrollbar  style="display: flex;flex-direction: row;height: 100%">
+                  <el-scrollbar  style="display: flex;flex-direction: row;height: 100%;width: 100%">
                     <div style="display: flex;flex-direction: row;height: 100%;">
                       <div v-if="item.result == null"></div>
                       <div v-else v-for="(item1,index) in item.images">
-                        <img :src="item1" style="width: 86px;height: 100%">
+                        <img :src="$host + item1" style="width: 86px;height: 100%">
                       </div>
                     </div>
                   </el-scrollbar>
@@ -34,52 +34,52 @@
       </div>
 
       <div class="right"style="width: 60%;height: 100%;display: flex;justify-content: space-between;flex-direction: column" >
-<!--        <div style="display: flex;height:100px;flex-direction: row;padding-top: 20px;padding-bottom: 40px;justify-content: space-between;padding-left: 60px;padding-right: 60px;">-->
-<!--          <div style="height: 100px;width: 140px;background-color:#B0D0EA">-->
-<!--            <div class="value" style="padding-top: 20px">今日检测数量</div>-->
-<!--            <div class="value" style="padding-top: 10px;font-size: 18px">{{today.all}}</div>-->
-<!--          </div>-->
-<!--          <div style="height: 100px;width: 140px;background-color: #5ec1c9">-->
-<!--            <div class="value" style="padding-top: 20px">今日合格数</div>-->
-<!--            <div class="value" style="padding-top: 10px;font-size: 18px">{{today.good}}</div>-->
-<!--          </div>-->
-<!--          <div style="height: 100px;width: 140px;background-color:#f8b45c">-->
-<!--            <div class="value" style="padding-top: 20px">今日杂质数</div>-->
-<!--            <div class="value" style="padding-top: 10px;font-size: 18px">{{today.bad}}</div>-->
-<!--          </div>-->
-<!--        </div>-->
-        <div style=" height: 20%;padding-left:20px">
-            <div style=" height: 100%;width: 98%;padding-left: 1%;padding-right: 1%">
-
-
-              <div class="wrapper1">
-                <div class="wrapper-content1" v-for="(item,index) in lists">
-                  <div style="width: 100%;height: 90%;display: flex;flex-direction: column;padding-top: 5%;padding-bottom: 5%">
-                    <div class="top" style="width: 100%;height: 60%">
-                      <div style="height: 100%;background-color: silver;">
-                        <el-scrollbar  style="display: flex;flex-direction: row;height: 100%">
-                          <div style="display: flex;flex-direction: row;height: 100%;">
-                            <div v-if="item.result == null"></div>
-                            <div v-else v-for="(item1,index) in item.images">
-                              <img :src="item1" style="width: 65.5px;height: 100%">
-                            </div>
-                          </div>
-                        </el-scrollbar>
-                      </div>
-                    </div>
-                    <div class="bottom" style="width:100%;background-color:lavender ;height: 40%;display: flex;justify-content: space-between;flex-direction: row;align-items: center">
-                      <div :class="item.result==0? 'actives':'native'" style="width:30px;height: 30px;border-radius: 50%;margin-left: 10px"></div>
-                      <div :class="item.result==1? 'actives1':'native1'" style="width:30px;height: 30px;border-radius: 50%"></div>
-                      <div :class="item.result==null? 'actives2':'native2'" style="width:30px;height: 30px;border-radius: 50%;margin-right: 10px"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-
-            </div>
+        <div style="display: flex;height:100px;flex-direction: row;padding-top: 20px;padding-bottom: 40px;justify-content: space-between;padding-left: 60px;padding-right: 60px;">
+          <div style="height: 100px;width: 140px;background-color:#B0D0EA">
+            <div class="value" style="padding-top: 20px">今日检测数量</div>
+            <div class="value" style="padding-top: 10px;font-size: 18px">{{today.all}}</div>
+          </div>
+          <div style="height: 100px;width: 140px;background-color: #5ec1c9">
+            <div class="value" style="padding-top: 20px">今日合格数</div>
+            <div class="value" style="padding-top: 10px;font-size: 18px">{{today.good}}</div>
+          </div>
+          <div style="height: 100px;width: 140px;background-color:#f8b45c">
+            <div class="value" style="padding-top: 20px">今日杂质数</div>
+            <div class="value" style="padding-top: 10px;font-size: 18px">{{today.bad}}</div>
+          </div>
         </div>
+<!--        <div style=" height: 20%;padding-left:20px">-->
+<!--            <div style=" height: 100%;width: 98%;padding-left: 1%;padding-right: 1%">-->
+
+
+<!--              <div class="wrapper1">-->
+<!--                <div class="wrapper-content1" v-for="(item,index) in lists">-->
+<!--                  <div style="width: 100%;height: 90%;display: flex;flex-direction: column;padding-top: 5%;padding-bottom: 5%">-->
+<!--                    <div class="top" style="width: 100%;height: 60%">-->
+<!--                      <div style="height: 100%;background-color: silver;">-->
+<!--                        <el-scrollbar  style="display: flex;flex-direction: row;height: 100%">-->
+<!--                          <div style="display: flex;flex-direction: row;height: 100%;">-->
+<!--                            <div v-if="item.result == null"></div>-->
+<!--                            <div v-else v-for="(item1,index) in item.images">-->
+<!--                              <img :src="$host +item1" style="width: 65.5px;height: 100%">-->
+<!--                            </div>-->
+<!--                          </div>-->
+<!--                        </el-scrollbar>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="bottom" style="width:100%;background-color:lavender ;height: 40%;display: flex;justify-content: space-between;flex-direction: row;align-items: center">-->
+<!--                      <div :class="item.result==0? 'actives':'native'" style="width:30px;height: 30px;border-radius: 50%;margin-left: 10px"></div>-->
+<!--                      <div :class="item.result==1? 'actives1':'native1'" style="width:30px;height: 30px;border-radius: 50%"></div>-->
+<!--                      <div :class="item.result==null? 'actives2':'native2'" style="width:30px;height: 30px;border-radius: 50%;margin-right: 10px"></div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+
+
+
+<!--            </div>-->
+<!--        </div>-->
         <div style="height: 75%;padding-left: 10px">
           <div style=" height: 100%;width: 100%">
             <div class="block" style="padding-top: 10px;padding-bottom: 30px;text-align: right">
@@ -270,7 +270,8 @@
             },
             real: function (msg) {
                 var that =this
-                console.log(msg.data["id"],that.lists[msg.data["id"]],msg.data)
+                console.log(msg.data)
+                // that.lists2[msg.data["id"]]=msg.data
                 // that.lists[msg.data["id"]] =msg.data.images
                 Vue.set(that.lists2,msg.data["id"],msg.data)
                 console.log(that.lists2)
@@ -399,6 +400,6 @@
   }
   .el-scrollbar__wrap{
     overflow-y:hidden;
+    overflow-x: hidden;
   }
-
 </style>

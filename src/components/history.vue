@@ -57,7 +57,7 @@
       　　<template slot-scope="scope">
             <div  style="display: flex;flex-direction: row;height: 50px">
               <div v-for="(item,i) in scope.row.imgs" style="padding-right: 10px">
-                <a :href="item" target="_blank"><img :src="item" width="50" height="50" border="0px solid black" class="head_pic"/></a>
+                <a :href="item" target="_blank"><img :src="$host +item" width="50" height="50" border="0px solid black" class="head_pic"/></a>
               </div>
             </div>
       　　</template>
