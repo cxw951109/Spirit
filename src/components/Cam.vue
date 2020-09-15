@@ -16,18 +16,13 @@
                   </el-scrollbar>
                 </div>
               </div>
+
               <div class="bottom" style="width:100%;background-color:lavender ;height: 40%;display: flex;justify-content: space-between;flex-direction: row;align-items: center">
-<!--                <div style="display: flex;justify-content: space-between;flex-direction: row;align-items: center;width:70%">-->
-                  <div :class="item.result==0? 'actives':'native'" style="width:30px;height: 30px;border-radius: 50%;margin-left: 10px"></div>
-                  <div :class="item.result==1? 'actives1':'native1'" style="width:30px;height: 30px;border-radius: 50%"></div>
-                  <div :class="item.result==null? 'actives2':'native2'" style="width:30px;height: 30px;border-radius: 50%;margin-right: 10px"></div>
-<!--                </div>-->
-<!--                <div style="display: flex;justify-content: space-between;flex-direction: row;align-items: center;width:30%">-->
-<!--                  <div style="margin-right: 10px" v-if="item.result==0">合格</div>-->
-<!--                  <div style="margin-right: 10px" v-if="item.result==1">杂质</div>-->
-<!--                  <div style="margin-right: 10px" v-else></div>-->
-<!--                </div>-->
+<!--                  <div :class="item.result==0? 'actives':'native'" style="width:30px;height: 30px;border-radius: 50%;margin-left: 10px"></div>-->
+<!--                  <div :class="item.result==1? 'actives1':'native1'" style="width:30px;height: 30px;border-radius: 50%"></div>-->
+<!--                  <div :class="item.result==null? 'actives2':'native2'" style="width:30px;height: 30px;border-radius: 50%;margin-right: 10px"></div>-->
               </div>
+
             </div>
           </div>
         </div>
@@ -273,7 +268,6 @@
             }
         },
         mounted(){
-            this.get_today();
             this.drawLine();
         },
         methods:{
