@@ -133,8 +133,6 @@
             return {
                 lists:[{"result":null,"images":[]},{"result":null,"images":[]},{"result":null,"images":[]},{"result":null,"images":[]},{"result":null,"images":[]},{"result":null,"images":[]}],
                 lists2:[{"result":null,"images":[]},{"result":null,"images":[]},{"result":null,"images":[]},{"result":null,"images":[]},{"result":null,"images":[]},{"result":null,"images":[]},{"result":null,"images":[]},{"result":null,"images":[]},{"result":null,"images":[]},{"result":null,"images":[]},{"result":null,"images":[]},{"result":null,"images":[]}],
-                // imgWifi:require("../assets/jx.gif"),
-                // imgWifi:require("../../static/site_data/S1001/1590562930182/1590562930182_GHU.png"),
                 today:{
                   "all":'',
                   "good":'',
@@ -221,7 +219,7 @@
                     }]
                 },
                 go(row) {
-                  console.log(row)
+                  // console.log(row)
                   if (row != undefined) {
                     this.$router.push({ path: "/history", query: { input: row }});
                   }
@@ -270,15 +268,12 @@
             },
             real: function (msg) {
                 var that =this
-                console.log(msg.data)
-                // that.lists2[msg.data["id"]]=msg.data
-                // that.lists[msg.data["id"]] =msg.data.images
+                // console.log(msg.data)
                 Vue.set(that.lists2,msg.data["id"],msg.data)
-                console.log(that.lists2)
             }
         },
         mounted(){
-            // this.get_today();
+            this.get_today();
             this.drawLine();
         },
         methods:{

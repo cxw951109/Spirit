@@ -37,14 +37,6 @@
           },
           present: function (msg) {
             var that =this
-            console.log(msg)
-            // that.lists2[msg.data["id"]]["images"]=require("@/assets/site_data/now/"+msg["images"]+".jpg");
-            // console.log(msg.data["images"])
-            // var d =msg.data["images"]
-
-            // that.imageurl(msg.data["id"])
-            // Vue.set(that.lists2,msg.data["id"],msg.data)
-            // var imgs =require('C:/Users/cxw/Desktop/711/Spirit/src/assets/site_data/now/1_1599187916.jpg')
             that.lists2[msg.data["id"]]["images"]=msg.data["images"]
           }
         },
@@ -55,7 +47,6 @@
           get_imgs() {
             var that = this
             that.$http.post('http://localhost:5000/get_imgs').then(function (res) {
-              console.log(res.data.data)
               that.lists2 =res.data.data
             })
           }
